@@ -73,6 +73,14 @@
 		.descending::after {
 			content: ' ▼';
 		}
+		
+        .collapsed::after {
+            content: ' [+]';
+        }
+
+        .expanded::after {
+            content: ' [-]';
+        }
 
 		.search-container {
 			margin: 10px 0;
@@ -120,7 +128,7 @@
 <br>
 		<div class="container">
 			<div>
-				<button onclick="toggleImage_1()" class="btn" id="toggle-btn">Toggle Image (sorted by name)</button>
+            <button onclick="toggleImage_1()" class="btn" id="toggle-btn_1">Toggle Image (sorted by name)<span id="toggle-symbol_1"></span></button>
 			</div>
 		</div>
 		<br>
@@ -132,7 +140,7 @@
 		<br>
 		<div class="container">
 			<div>
-				<button onclick="toggleImage_2()" class="btn" id="toggle-btn">Toggle Image (sorted by size)</button>
+            <button onclick="toggleImage_2()" class="btn" id="toggle-btn_2">Toggle Image (sorted by size)<span id="toggle-symbol_2"></span></button>
 			</div>
 		</div>
 		<br>
@@ -1452,6 +1460,11 @@
 		generate();
 		sortTable(sortColumn); // Sort by initial sorted column on page load
 		markHeader(0); // Mark the first column header with dark red background
+		// Set initial styles for toggle buttons
+		var toggleBtn_1 = document.getElementById("toggle-btn_1");
+		var toggleBtn_2 = document.getElementById("toggle-btn_2");
+		toggleBtn_1.classList.add("collapsed");
+		toggleBtn_2.classList.add("collapsed");
 	};
 
 	function createHex() {
@@ -1579,12 +1592,32 @@
 	}
 	function toggleImage_1() {
 		var imageContainer_1 = document.getElementById("image-container_1");
-		imageContainer_1.style.display = (imageContainer_1.style.display === "block") ? "none" : "block";
+		var toggleBtn_1 = document.getElementById("toggle-btn_1");
+		if (imageContainer_1.style.display === "block") {
+			imageContainer_1.style.display = "none";
+			toggleBtn_1.classList.remove("expanded");
+			toggleBtn_1.classList.add("collapsed");
+		} else {
+			imageContainer_1.style.display = "block";
+			toggleBtn_1.classList.remove("collapsed");
+			toggleBtn_1.classList.add("expanded");
+		}
 	}
+
 	function toggleImage_2() {
 		var imageContainer_2 = document.getElementById("image-container_2");
-		imageContainer_2.style.display = (imageContainer_2.style.display === "block") ? "none" : "block";
+		var toggleBtn_2 = document.getElementById("toggle-btn_2");
+		if (imageContainer_2.style.display === "block") {
+			imageContainer_2.style.display = "none";
+			toggleBtn_2.classList.remove("expanded");
+			toggleBtn_2.classList.add("collapsed");
+		} else {
+			imageContainer_2.style.display = "block";
+			toggleBtn_2.classList.remove("collapsed");
+			toggleBtn_2.classList.add("expanded");
+		}
 	}
+
 
 </script>
 </body>
