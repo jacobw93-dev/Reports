@@ -109,7 +109,6 @@
 		}
 	</style>
 </head>
-
 <body id="bg" style="color:white;text-shadow: 1px 1px #000000;">
 	<div class="container">
 		<div>
@@ -119,54 +118,52 @@
 			<code id="output" />
 		</div>
 	</div>
-
 <BODY>
-
-<h1 align="center">VisualDirSize Report, 17.05.2024 17:00:00</h1>
+<h1 align="center">VisualDirSize Report, 20.05.2024 12:59:52</h1>
 <p align="center"><b>Report path - I:\.ignore\Pics\</b><br>
-<b>Total scan size - 12 746,25 G</b><br>
-<b>Total files scanned - 9 481 210</b></p><br>
+<b>Total scan size - 12 814,52 G</b><br>
+<b>Total files scanned - 9 515 804</b></p><br>
 <br>
-		<div class="container">
-			<div>
-            <button onclick="toggleImage_1()" class="btn" id="toggle-btn_1">Toggle Image (sorted by name)<span id="toggle-symbol_1"></span></button>
-			</div>
+	<div class="container">
+		<div>
+		<button onclick="toggleImage_1()" class="btn" id="toggle-btn_1">Toggle Image (sorted by name)<span id="toggle-symbol_1"></span></button>
 		</div>
-		<br>
-		<div id="image-container_1">
-			<p align="center">
-				<img src="Folders_disk_usage_report - order by name.png" id="report-image" />
-			</p>
+	</div>
+	<br>
+	<div id="image-container_1">
+		<p align="center">
+			<img src="Visual Directory Size Report - Order By Name.png" id="report-image" />
+		</p>
+	</div>
+	<br>
+	<div class="container">
+		<div>
+		<button onclick="toggleImage_2()" class="btn" id="toggle-btn_2">Toggle Image (sorted by size)<span id="toggle-symbol_2"></span></button>
 		</div>
-		<br>
-		<div class="container">
-			<div>
-            <button onclick="toggleImage_2()" class="btn" id="toggle-btn_2">Toggle Image (sorted by size)<span id="toggle-symbol_2"></span></button>
-			</div>
+	</div>
+	<br>
+	<div id="image-container_2">
+		<p align="center">
+			<img src="Visual Directory Size Report - Order By Size.png" id="report-image" />
+		</p>
+	</div>
+	<div class="search_container">
+		<div class="search-container">
+			<input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for names...">
+			<label>
+				<input type="checkbox" id="regexSwitch"> Use Regular Expression
+			</label>
 		</div>
-		<br>
-		<div id="image-container_2">
-			<p align="center">
-				<img src="Folders_disk_usage_report - order by size.png" id="report-image" />
-			</p>
-		</div>
-		<div class="search_container">
-			<div class="search-container">
-				<input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for names...">
-				<label>
-					<input type="checkbox" id="regexSwitch"> Use Regular Expression
-				</label>
-			</div>
-		</div>
-		<br>
-		<table id="data-table" border="1" cellpadding="2" align="center">
-			<tr>
-				<th onclick="sortTable(0)" class="sortable" title="Fixed order! Cannot be sorted">No.</th>
-				<th onclick="sortTable(1)" class="sortable">Name</th>
-				<th onclick="sortTable(2)" class="sortable">Size</th>
-				<th onclick="sortTable(3)" class="sortable">Files</th>
-				<th onclick="sortTable(4)" class="sortable">% of Parent</th>
-			</tr>
+	</div>
+	<br>
+	<table id="data-table" border="1" cellpadding="2" align="center">
+		<tr>
+			<th onclick="sortTable(0)" class="sortable" title="Fixed order! Cannot be sorted">No.</th>
+			<th onclick="sortTable(1)" class="sortable">Name</th>
+			<th onclick="sortTable(2)" class="sortable">Size</th>
+			<th onclick="sortTable(3)" class="sortable">Files</th>
+			<th onclick="sortTable(4)" class="sortable">% of Parent</th>
+		</tr>
 <tr><td /><td>Aaliyah</td><td align="right">3,53 G</td><td align="right">2 321</td><td align="right">0%</td></tr>
 <tr><td /><td>Abbey Brooks</td><td align="right">7,65 G</td><td align="right">21 221</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Abbie Cat</td><td align="right">4,77 G</td><td align="right">1 538</td><td align="right">0%</td></tr>
@@ -198,7 +195,7 @@
 <tr><td /><td>Alektra Sky</td><td align="right">1,45 G</td><td align="right">1 258</td><td align="right">0%</td></tr>
 <tr><td /><td>Alena</td><td align="right">1,01 G</td><td align="right">1 511</td><td align="right">0%</td></tr>
 <tr><td /><td>Alena D</td><td align="right">4,55 G</td><td align="right">4 271</td><td align="right">0%</td></tr>
-<tr><td /><td>Alena H</td><td align="right">19,17 G</td><td align="right">18 560</td><td align="right">0,2 %</td></tr>
+<tr><td /><td>Alena H</td><td align="right">19,17 G</td><td align="right">18 560</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Alena Hemkova</td><td align="right">4,53 G</td><td align="right">4 111</td><td align="right">0%</td></tr>
 <tr><td /><td>Aletta Ocean</td><td align="right">14,76 G</td><td align="right">6 949</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Alex Lynn</td><td align="right">2,51 G</td><td align="right">1 504</td><td align="right">0%</td></tr>
@@ -232,7 +229,7 @@
 <tr><td /><td>Alison Angel</td><td align="right">2,16 G</td><td align="right">13 366</td><td align="right">0%</td></tr>
 <tr><td /><td>Alison Tyler</td><td align="right">1,97 G</td><td align="right">1 404</td><td align="right">0%</td></tr>
 <tr><td /><td>Alissa Foxy</td><td align="right">56,05 G</td><td align="right">10 547</td><td align="right">0,4 %</td></tr>
-<tr><td /><td>Allesandra Snow</td><td align="right">6,39 G</td><td align="right">5 481</td><td align="right">0,1 %</td></tr>
+<tr><td /><td>Allesandra Snow</td><td align="right">6,39 G</td><td align="right">5 481</td><td align="right">0%</td></tr>
 <tr><td /><td>Alley Baggett</td><td align="right">1,69 G</td><td align="right">13 430</td><td align="right">0%</td></tr>
 <tr><td /><td>Altea B</td><td align="right">33,81 G</td><td align="right">17 225</td><td align="right">0,3 %</td></tr>
 <tr><td /><td>Alya Stark</td><td align="right">4,86 G</td><td align="right">1 713</td><td align="right">0%</td></tr>
@@ -427,7 +424,7 @@
 <tr><td /><td>Catalina Cruz</td><td align="right">15,68 G</td><td align="right">38 865</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Cathaleeya</td><td align="right">353,9 M</td><td align="right">718</td><td align="right">0%</td></tr>
 <tr><td /><td>Catie Parker</td><td align="right">4,77 G</td><td align="right">5 585</td><td align="right">0%</td></tr>
-<tr><td /><td>Cecelia</td><td align="right">44,68 G</td><td align="right">19 486</td><td align="right">0,4 %</td></tr>
+<tr><td /><td>Cecelia</td><td align="right">44,68 G</td><td align="right">19 486</td><td align="right">0,3 %</td></tr>
 <tr><td /><td>Celleste</td><td align="right">773,6 M</td><td align="right">554</td><td align="right">0%</td></tr>
 <tr><td /><td>Cezaria A</td><td align="right">4,39 G</td><td align="right">2 103</td><td align="right">0%</td></tr>
 <tr><td /><td>Chanel Fenn</td><td align="right">15,18 G</td><td align="right">6 927</td><td align="right">0,1 %</td></tr>
@@ -521,7 +518,7 @@
 <tr><td /><td>Diana Brite</td><td align="right">3,42 G</td><td align="right">528</td><td align="right">0%</td></tr>
 <tr><td /><td>Diana Bronce</td><td align="right">1,78 G</td><td align="right">916</td><td align="right">0%</td></tr>
 <tr><td /><td>Diana G</td><td align="right">20,18 G</td><td align="right">10 489</td><td align="right">0,2 %</td></tr>
-<tr><td /><td>Diana Jam</td><td align="right">108,64 G</td><td align="right">39 069</td><td align="right">0,9 %</td></tr>
+<tr><td /><td>Diana Jam</td><td align="right">108,64 G</td><td align="right">39 069</td><td align="right">0,8 %</td></tr>
 <tr><td /><td>Diana Rider</td><td align="right">1,67 G</td><td align="right">896</td><td align="right">0%</td></tr>
 <tr><td /><td>Dido A</td><td align="right">62,13 G</td><td align="right">36 331</td><td align="right">0,5 %</td></tr>
 <tr><td /><td>Dillion Harper</td><td align="right">6,63 G</td><td align="right">3 828</td><td align="right">0,1 %</td></tr>
@@ -584,6 +581,7 @@
 <tr><td /><td>Eratica</td><td align="right">2,72 G</td><td align="right">1 690</td><td align="right">0%</td></tr>
 <tr><td /><td>Erica B</td><td align="right">48,44 G</td><td align="right">21 319</td><td align="right">0,4 %</td></tr>
 <tr><td /><td>Erica Campbell</td><td align="right">3,79 G</td><td align="right">11 510</td><td align="right">0%</td></tr>
+<tr><td /><td>Erica Ellyson</td><td align="right">822,6 M</td><td align="right">1 643</td><td align="right">0%</td></tr>
 <tr><td /><td>Estelle</td><td align="right">5,03 G</td><td align="right">2 115</td><td align="right">0%</td></tr>
 <tr><td /><td>Estonika</td><td align="right">1,19 G</td><td align="right">774</td><td align="right">0%</td></tr>
 <tr><td /><td>Eufrat</td><td align="right">79,4 G</td><td align="right">64 571</td><td align="right">0,6 %</td></tr>
@@ -671,7 +669,7 @@
 <tr><td /><td>Heike A</td><td align="right">1,68 G</td><td align="right">1 220</td><td align="right">0%</td></tr>
 <tr><td /><td>Helena Karel</td><td align="right">909,9 M</td><td align="right">1 309</td><td align="right">0%</td></tr>
 <tr><td /><td>Helene Trobec</td><td align="right">8,77 G</td><td align="right">3 214</td><td align="right">0,1 %</td></tr>
-<tr><td /><td>Helga Lovekaty</td><td align="right">7,73 G</td><td align="right">6 809</td><td align="right">0,1 %</td></tr>
+<tr><td /><td>Helga Lovekaty</td><td align="right">4,01 G</td><td align="right">4 547</td><td align="right">0%</td></tr>
 <tr><td /><td>Hilary</td><td align="right">61,53 G</td><td align="right">24 445</td><td align="right">0,5 %</td></tr>
 <tr><td /><td>Hilary Wind</td><td align="right">4,78 G</td><td align="right">1 891</td><td align="right">0%</td></tr>
 <tr><td /><td>Holly Garner</td><td align="right">4,9 G</td><td align="right">4 259</td><td align="right">0%</td></tr>
@@ -807,6 +805,7 @@
 <tr><td /><td>Karissa</td><td align="right">22,59 G</td><td align="right">11 443</td><td align="right">0,2 %</td></tr>
 <tr><td /><td>Karla Spice</td><td align="right">1,37 G</td><td align="right">13 250</td><td align="right">0%</td></tr>
 <tr><td /><td>Karlie Montana</td><td align="right">2,08 G</td><td align="right">2 374</td><td align="right">0%</td></tr>
+<tr><td /><td>Karolina Young</td><td align="right">2,8 G</td><td align="right">1 390</td><td align="right">0%</td></tr>
 <tr><td /><td>Karoline A</td><td align="right">3,12 G</td><td align="right">4 411</td><td align="right">0%</td></tr>
 <tr><td /><td>Kassie</td><td align="right">2,65 G</td><td align="right">1 356</td><td align="right">0%</td></tr>
 <tr><td /><td>Katalina</td><td align="right">1,45 G</td><td align="right">1 732</td><td align="right">0%</td></tr>
@@ -1031,6 +1030,7 @@
 <tr><td /><td>Marciana</td><td align="right">24,06 G</td><td align="right">5 846</td><td align="right">0,2 %</td></tr>
 <tr><td /><td>Marcy</td><td align="right">4,04 G</td><td align="right">7 470</td><td align="right">0%</td></tr>
 <tr><td /><td>Margarita C</td><td align="right">6,3 G</td><td align="right">3 792</td><td align="right">0%</td></tr>
+<tr><td /><td>Margita Lesna</td><td align="right">1,5 G</td><td align="right">1 172</td><td align="right">0%</td></tr>
 <tr><td /><td>Margo Purz</td><td align="right">1,7 G</td><td align="right">713</td><td align="right">0%</td></tr>
 <tr><td /><td>Mari B</td><td align="right">3,03 G</td><td align="right">1 864</td><td align="right">0%</td></tr>
 <tr><td /><td>Maria</td><td align="right">12,62 G</td><td align="right">6 608</td><td align="right">0,1 %</td></tr>
@@ -1072,7 +1072,7 @@
 <tr><td /><td>Matsuri Kiritani</td><td align="right">639,7 M</td><td align="right">517</td><td align="right">0%</td></tr>
 <tr><td /><td>Matty</td><td align="right">18,77 G</td><td align="right">9 116</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Maxine</td><td align="right">18,5 G</td><td align="right">4 383</td><td align="right">0,1 %</td></tr>
-<tr><td /><td>Maya</td><td align="right">31,94 G</td><td align="right">19 164</td><td align="right">0,3 %</td></tr>
+<tr><td /><td>Maya</td><td align="right">31,94 G</td><td align="right">19 164</td><td align="right">0,2 %</td></tr>
 <tr><td /><td>Maya C</td><td align="right">5,37 G</td><td align="right">4 462</td><td align="right">0%</td></tr>
 <tr><td /><td>Melani</td><td align="right">2,05 G</td><td align="right">1 976</td><td align="right">0%</td></tr>
 <tr><td /><td>Melanie Marie</td><td align="right">2,01 G</td><td align="right">2 681</td><td align="right">0%</td></tr>
@@ -1092,10 +1092,8 @@
 <tr><td /><td>Michaela Hylmar</td><td align="right">1,02 G</td><td align="right">1 232</td><td align="right">0%</td></tr>
 <tr><td /><td>Michaela Isizzu</td><td align="right">21,71 G</td><td align="right">14 028</td><td align="right">0,2 %</td></tr>
 <tr><td /><td>Michaela Plankova</td><td align="right">18,02 G</td><td align="right">8 955</td><td align="right">0,1 %</td></tr>
-<tr><td /><td>Michelle</td><td align="right">2,19 G</td><td align="right">5 143</td><td align="right">0%</td></tr>
-<tr><td /><td>Michelle B</td><td align="right">1,09 G</td><td align="right">1 364</td><td align="right">0%</td></tr>
-<tr><td /><td>Michelle Bond</td><td align="right">5,8 G</td><td align="right">16 868</td><td align="right">0%</td></tr>
-<tr><td /><td>Michelle M</td><td align="right">6,53 G</td><td align="right">14 234</td><td align="right">0,1 %</td></tr>
+<tr><td /><td>Michelle Bond</td><td align="right">5,78 G</td><td align="right">16 771</td><td align="right">0%</td></tr>
+<tr><td /><td>Michelle M</td><td align="right">6,5 G</td><td align="right">14 098</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Midnight</td><td align="right">2,65 G</td><td align="right">1 311</td><td align="right">0%</td></tr>
 <tr><td /><td>Mikaela Witt</td><td align="right">9,4 G</td><td align="right">6 779</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Mila</td><td align="right">11,66 G</td><td align="right">4 106</td><td align="right">0,1 %</td></tr>
@@ -1185,6 +1183,7 @@
 <tr><td /><td>Night</td><td align="right">19,52 G</td><td align="right">11 212</td><td align="right">0,2 %</td></tr>
 <tr><td /><td>Night A</td><td align="right">5,78 G</td><td align="right">3 158</td><td align="right">0%</td></tr>
 <tr><td /><td>Nika O</td><td align="right">15,65 G</td><td align="right">7 433</td><td align="right">0,1 %</td></tr>
+<tr><td /><td>Niki Mey</td><td align="right">14,81 G</td><td align="right">7 525</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Nikia</td><td align="right">13,6 G</td><td align="right">7 376</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Nikita</td><td align="right">7,39 G</td><td align="right">7 653</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Nikki Sims</td><td align="right">30,16 G</td><td align="right">35 697</td><td align="right">0,2 %</td></tr>
@@ -1242,6 +1241,7 @@
 <tr><td /><td>Pixi</td><td align="right">6,85 G</td><td align="right">400</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Playful Anne</td><td align="right">2,28 G</td><td align="right">2 680</td><td align="right">0%</td></tr>
 <tr><td /><td>Polina Kadynskaya</td><td align="right">29,02 G</td><td align="right">12 460</td><td align="right">0,2 %</td></tr>
+<tr><td /><td>Polina Peca</td><td align="right">89,2 M</td><td align="right">580</td><td align="right">0%</td></tr>
 <tr><td /><td>Polly B</td><td align="right">9,44 G</td><td align="right">5 222</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Polly Pure</td><td align="right">2,44 G</td><td align="right">975</td><td align="right">0%</td></tr>
 <tr><td /><td>Precious</td><td align="right">3,31 G</td><td align="right">1 845</td><td align="right">0%</td></tr>
@@ -1364,6 +1364,7 @@
 <tr><td /><td>Siri</td><td align="right">6,27 G</td><td align="right">7 902</td><td align="right">0%</td></tr>
 <tr><td /><td>Sivilla</td><td align="right">4,56 G</td><td align="right">1 952</td><td align="right">0%</td></tr>
 <tr><td /><td>Siya</td><td align="right">2,35 G</td><td align="right">1 209</td><td align="right">0%</td></tr>
+<tr><td /><td>Skarlett</td><td align="right">4,53 G</td><td align="right">1 943</td><td align="right">0%</td></tr>
 <tr><td /><td>Snezhana</td><td align="right">7,09 G</td><td align="right">15 688</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Sofi A</td><td align="right">19,55 G</td><td align="right">9 827</td><td align="right">0,2 %</td></tr>
 <tr><td /><td>Sofi Roko</td><td align="right">1,47 G</td><td align="right">733</td><td align="right">0%</td></tr>
@@ -1407,8 +1408,9 @@
 <tr><td /><td>Stella Jones</td><td align="right">1,09 G</td><td align="right">1 646</td><td align="right">0%</td></tr>
 <tr><td /><td>Stella Lane</td><td align="right">3,2 G</td><td align="right">1 834</td><td align="right">0%</td></tr>
 <tr><td /><td>Stella Moon</td><td align="right">1,68 G</td><td align="right">893</td><td align="right">0%</td></tr>
-<tr><td /><td>Stepanka</td><td align="right">4,73 G</td><td align="right">5 279</td><td align="right">0%</td></tr>
-<tr><td /><td>Stepanka (YT)</td><td align="right">142,7 M</td><td align="right">103</td><td align="right">0%</td></tr>
+<tr><td /><td>Stepanka</td><td align="right">142,7 M</td><td align="right">103</td><td align="right">0%</td></tr>
+<tr><td /><td>Stephania</td><td align="right">7,56 G</td><td align="right">4 847</td><td align="right">0,1 %</td></tr>
+<tr><td /><td>Stephanie Rhodes</td><td align="right">4,73 G</td><td align="right">5 280</td><td align="right">0%</td></tr>
 <tr><td /><td>Stracy Stone</td><td align="right">17,09 G</td><td align="right">25 155</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Sumiko</td><td align="right">5,52 G</td><td align="right">2 234</td><td align="right">0%</td></tr>
 <tr><td /><td>Summer</td><td align="right">6,49 G</td><td align="right">11 255</td><td align="right">0,1 %</td></tr>
@@ -1418,6 +1420,7 @@
 <tr><td /><td>Susana C</td><td align="right">9,79 G</td><td align="right">3 751</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Susana Spears</td><td align="right">5,69 G</td><td align="right">14 452</td><td align="right">0%</td></tr>
 <tr><td /><td>Susann</td><td align="right">2,67 G</td><td align="right">2 860</td><td align="right">0%</td></tr>
+<tr><td /><td>Susie</td><td align="right">15,33 G</td><td align="right">9 873</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Suzanna</td><td align="right">43,28 G</td><td align="right">16 427</td><td align="right">0,3 %</td></tr>
 <tr><td /><td>Suzie Carina</td><td align="right">2,87 G</td><td align="right">8 603</td><td align="right">0%</td></tr>
 <tr><td /><td>Suzie Q</td><td align="right">13,86 G</td><td align="right">9 537</td><td align="right">0,1 %</td></tr>
@@ -1430,6 +1433,7 @@
 <tr><td /><td>Sylvia Laurent</td><td align="right">2,23 G</td><td align="right">5 570</td><td align="right">0%</td></tr>
 <tr><td /><td>Syren Sexton</td><td align="right">5,65 G</td><td align="right">8 087</td><td align="right">0%</td></tr>
 <tr><td /><td>Tahlia Paris</td><td align="right">1,1 G</td><td align="right">1 072</td><td align="right">0%</td></tr>
+<tr><td /><td>Talia</td><td align="right">21,6 G</td><td align="right">11 219</td><td align="right">0,2 %</td></tr>
 <tr><td /><td>Talia Amanda</td><td align="right">1,47 G</td><td align="right">2 081</td><td align="right">0%</td></tr>
 <tr><td /><td>Tami P</td><td align="right">3,15 G</td><td align="right">1 916</td><td align="right">0%</td></tr>
 <tr><td /><td>Tania</td><td align="right">3,45 G</td><td align="right">1 886</td><td align="right">0%</td></tr>
@@ -1467,7 +1471,7 @@
 <tr><td /><td>Traci</td><td align="right">9 G</td><td align="right">2 800</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Tracy Lindsay</td><td align="right">26,09 G</td><td align="right">21 540</td><td align="right">0,2 %</td></tr>
 <tr><td /><td>Trista A</td><td align="right">927,6 M</td><td align="right">411</td><td align="right">0%</td></tr>
-<tr><td /><td>Tutsi</td><td align="right">3,26 G</td><td align="right">1 466</td><td align="right">0%</td></tr>
+<tr><td /><td>Tutsi</td><td align="right">4,44 G</td><td align="right">2 331</td><td align="right">0%</td></tr>
 <tr><td /><td>Tyra</td><td align="right">3,62 G</td><td align="right">1 107</td><td align="right">0%</td></tr>
 <tr><td /><td>Uliana</td><td align="right">12,16 G</td><td align="right">7 298</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Ulya I</td><td align="right">6,35 G</td><td align="right">4 452</td><td align="right">0%</td></tr>
@@ -1500,6 +1504,7 @@
 <tr><td /><td>Veronika Benet</td><td align="right">2,13 G</td><td align="right">1 090</td><td align="right">0%</td></tr>
 <tr><td /><td>Veronika F</td><td align="right">22,01 G</td><td align="right">10 495</td><td align="right">0,2 %</td></tr>
 <tr><td /><td>Veronika Fasterova</td><td align="right">24,9 G</td><td align="right">17 827</td><td align="right">0,2 %</td></tr>
+<tr><td /><td>Veronika Glam</td><td align="right">5,11 G</td><td align="right">2 538</td><td align="right">0%</td></tr>
 <tr><td /><td>Veronika Zemanova</td><td align="right">2,16 G</td><td align="right">600</td><td align="right">0%</td></tr>
 <tr><td /><td>Verronica Kirei</td><td align="right">12,09 G</td><td align="right">13 441</td><td align="right">0,1 %</td></tr>
 <tr><td /><td>Verunka</td><td align="right">9,54 G</td><td align="right">14 380</td><td align="right">0,1 %</td></tr>
