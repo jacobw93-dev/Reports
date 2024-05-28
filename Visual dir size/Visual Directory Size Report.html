@@ -107,6 +107,14 @@
 		#image-container_2 {
 			display: none;
 		}
+		
+		.even {
+		  background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		.odd {
+		  background-color: transparent;
+		}
 	</style>
 </head>
 <body id="bg" style="background-color:black;color:white;text-shadow: 1px 1px #000000;">
@@ -1703,10 +1711,6 @@
 			row.cells[0].style.backgroundColor = 'rgba(160, 0, 0, 0.3)'; // Change background color of No column
 		});
 
-		// Alternate row colors based on sorted column
-		rows.forEach((row, index) => {
-			row.style.backgroundColor = index % 2 === 0 ? 'rgba(0, 0, 0, 0.5)' : ''; // Apply alternate color to even rows
-		});
 
 		rows.forEach(row => table.appendChild(row));
 
@@ -1721,6 +1725,8 @@
 		clickedHeader.classList.add("sorted", ascending ? "ascending" : "descending");
 
 		sortColumn = col;
+		
+		updateRowColors();
 	}
 
 	function parseNumericValue(value) {
@@ -1744,6 +1750,18 @@
 		headers[col].style.backgroundColor = 'rgba(160, 0, 0, 0.5)';
 	}
 	
+	function updateRowColors() {
+		var table = document.getElementById("data-table");
+		var rows = Array.from(table.rows); // Convert HTMLCollection to array
+		var visibleRows = rows.slice(1).filter(row => row.style.display!== "none"); // Get visible rows, excluding header row
+
+		// Alternate row colors
+		visibleRows.forEach((row, index) => {
+			row.classList.remove("even", "odd"); // Remove existing classes
+			row.classList.add(index % 2 === 0? "even" : "odd"); // Add alternate color class
+		});
+	}
+
 	function searchTable() {
 		var input, filter, table, tr, td, i, j, txtValue;
 		input = document.getElementById("searchInput");
@@ -1782,6 +1800,7 @@
 				tr[i].style.display = "none";
 			}
 		}
+		updateRowColors();
 	}
 	
 	function toggleImage_1() {
@@ -1811,7 +1830,6 @@
 			toggleBtn_2.classList.add("expanded");
 		}
 	}
-
 
 </script>
 </body>
