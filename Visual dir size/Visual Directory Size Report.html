@@ -1716,7 +1716,10 @@
 	function updateRowColors() {
 		var table = document.getElementById("data-table");
 		var rows = Array.from(table.rows); // Convert HTMLCollection to array
+		var headerRow = rows[0]; // Get the header row
 		var visibleRows = rows.slice(1).filter(row => row.style.display!== "none"); // Get visible rows, excluding header row
+		
+		headerRow.style.backgroundColor = "rgba(0, 0, 0, 1)";
 		// Alternate row colors
 		visibleRows.forEach((row, index) => {
 			row.classList.remove("even", "odd"); // Remove existing classes
