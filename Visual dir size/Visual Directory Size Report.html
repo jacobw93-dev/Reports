@@ -2,124 +2,121 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Raport VisualDirSize, I:\.ignore\Pics\</title>
-	<style>
-		.btn {
-			border-radius: 20px;
-			background-color: rgba(0, 0, 0, 0.5);
-			color: white;
-			padding: 20px;
-			text-align: center;
-			text-shadow: 1px 1px #000000;
-			border-color: transparent;
-		}
-		.btn:hover {
-			background-color: rgba(255, 255, 255, 0.2);
-			cursor: pointer;
-		}
-		.container>div {
-			align-items: center;
-			justify-content: center;
-			display: flex;
-			height: 5vh;
-			width: 100%;
-			margin-bottom: 10px;
-		}
-		.search_container {
-			align-items: center;
-			justify-content: center;
-			display: flex;
-			height: 5vh;
-			width: 100%;
-		}
-		.output {
-			border-radius: 5px;
-			background-color: rgba(0, 0, 0, 0.5);
-			color: white;
-			font-family: Calibri;
-			padding: 10px;
-			text-align: center;
-			text-shadow: 1px 1px #000000;
-			border-color: transparent;
-		}
-		#gen-btn {
-			font-size: 30px;
-		}
-		#toggle-btn {
-			font-size: 20px;
-		}
-		.sortable {
-			cursor: pointer;
-		}
-		.sorted {
-			background-color: #4CAF50;
-			/* Green */
-			color: white;
-		}
-		.ascending::after {
-			content: ' ▲';
-		}
-		.descending::after {
-			content: ' ▼';
-		}
-        .collapsed::after {
-            content: ' [+]';
-        }
-        .expanded::after {
-            content: ' [-]';
-        }
-		.search-container {
-			margin: 10px 0;
-			/* Add margin for spacing */
-			border: 2px solid #ccc;
-			border-radius: 5px;
-			overflow: hidden;
-			/* Hide overflow to prevent horizontal scroll */
-		}
-		.search-container input[type=text] {
-			width: 100%;
-			box-sizing: border-box;
-			border: none;
-			outline: none;
-			padding: 5px;
-			font-size: 16px;
-		}
-		#image-container_1 {
-			display: none;
-		}
-		#image-container_2 {
-			display: none;
-		}
-		.even {
-		  background-color: rgba(0, 0, 0, 0.5);
-		}
-		.odd {
-		  background-color: transparent;
-		}
-        @media screen
-		and (min-device-width : 320px)
-		and (max-device-width : 480px) {
-			h1 {
-				font-size: 40px;
-			}
-			.container {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .btn {
-                width: 80%;
-				font-size: 30px;
-            }
-			#data-table {
-                font-size: 24px;
-            }
-			body {
-                font-size: 24px;
-            }
-		
-		                .search-container input[type=text] {
-			font-size: 28px;
-		}
-	</style>
+<style>
+.btn {
+	 border-radius: 20px;
+	 background-color: rgba(0, 0, 0, 0.5);
+	 color: white;
+	 padding: 20px;
+	 text-align: center;
+	 text-shadow: 1px 1px #000000;
+	 border-color: transparent;
+}
+ .btn:hover {
+	 background-color: rgba(255, 255, 255, 0.2);
+	 cursor: pointer;
+}
+ .container>div {
+	 align-items: center;
+	 justify-content: center;
+	 display: flex;
+	 height: 5vh;
+	 width: 100%;
+	 margin-bottom: 10px;
+}
+ .search_container {
+	 align-items: center;
+	 justify-content: center;
+	 display: flex;
+	 height: 5vh;
+	 width: 100%;
+}
+ .output {
+	 border-radius: 5px;
+	 background-color: rgba(0, 0, 0, 0.5);
+	 color: white;
+	 font-family: Calibri;
+	 padding: 10px;
+	 text-align: center;
+	 text-shadow: 1px 1px #000000;
+	 border-color: transparent;
+}
+ #gen-btn {
+	 font-size: 30px;
+}
+ #toggle-btn {
+	 font-size: 20px;
+}
+ .sortable {
+	 cursor: pointer;
+}
+ .sorted {
+	 background-color: #4CAF50;
+	/* Green */
+	 color: white;
+}
+ .ascending::after {
+	 content: ' â˛';
+}
+ .descending::after {
+	 content: ' âź';
+}
+ .collapsed::after {
+	 content: ' [+]';
+}
+ .expanded::after {
+	 content: ' [-]';
+}
+ .search-container {
+	 margin: 10px 0;
+	/* Add margin for spacing */
+	 border: 2px solid #ccc;
+	 border-radius: 5px;
+	 overflow: hidden;
+	/* Hide overflow to prevent horizontal scroll */
+}
+ .search-container input[type=text] {
+	 width: 100%;
+	 box-sizing: border-box;
+	 border: none;
+	 outline: none;
+	 padding: 5px;
+	 font-size: 16px;
+}
+ #image-container_1 {
+	 display: none;
+}
+ #image-container_2 {
+	 display: none;
+}
+ .even {
+	 background-color: rgba(0, 0, 0, 0.5);
+}
+ .odd {
+	 background-color: transparent;
+}
+ @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	 h1 {
+		 font-size: 40px;
+	}
+	 .container {
+		 flex-direction: column;
+		 align-items: stretch;
+	}
+	 .btn {
+		 width: 80%;
+		 font-size: 30px;
+	}
+	 #data-table {
+		 font-size: 24px;
+	}
+	 body {
+		 font-size: 24px;
+	}
+	 .search-container input[type=text] {
+		 font-size: 32px;
+	}
+	 </style>
 </head>
 <body id="bg" style="background-color:black;color:white;text-shadow: 1px 1px #000000;">
 	<div class="container">
