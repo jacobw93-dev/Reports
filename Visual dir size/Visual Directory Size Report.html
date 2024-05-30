@@ -95,6 +95,29 @@
 		.odd {
 		  background-color: transparent;
 		}
+        @media screen
+		and (min-device-width : 320px)
+		and (max-device-width : 480px) {
+			h1 {
+				font-size: 40px;
+			}
+			.container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .btn {
+                width: 100%;
+				font-size: 30px;
+            }
+			#data-table {
+                font-size: 24px;
+            }
+			body {
+                font-size: 24px;
+            }
+			.search-container input[type=text] {
+                font-size: 24px;
+            }
 	</style>
 </head>
 <body id="bg" style="background-color:black;color:white;text-shadow: 1px 1px #000000;">
