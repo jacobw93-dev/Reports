@@ -1,8 +1,15 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-			<title>Raport VisualDirSize, I:\.ignore\Pics\</title>
-			<style>
+		<title>Raport VisualDirSize, I:\.ignore\Pics\</title>
+	<style>
+		a {
+            color: yellow;
+            text-decoration: none; /* Optional: Remove underline from links */
+        }
+        a:hover {
+            text-decoration: underline; /* Optional: Underline links on hover */
+        }
 		.btn {
 			border-radius: 20px;
 			background-color: rgba(0, 0, 0, 0.5);
@@ -122,7 +129,7 @@
               width: 80%;
             }
 	</style>
-		</head>
+	</head>
 		<body id="bg" style="background-color:black;color:white;text-shadow: 1px 1px #000000;">
 			<div class="container">
 				<div>
@@ -133,7 +140,7 @@
 				</div>
 			</div>
 			<BODY>
-<h1 align="center">VisualDirSize Report, 31.05.2024 13:50:04</h1>
+<h1 align="center">VisualDirSize Report, 31.05.2024 14:24:15</h1>
 <p align="center"><b>Report path - I:\.ignore\Pics\</b><br>
 <b>Total scan size - 13 027,02 G</b><br>
 <b>Total files scanned - 9 500 500</b></p><br>
@@ -1823,6 +1830,24 @@
 			toggleBtn_2.classList.add("expanded");
 		}
 	}
+	document.addEventListener('DOMContentLoaded', () => {
+            const table = document.getElementById('data-table');
+            const rows = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < rows.length; i++) { // Skip the header row
+                const cells = rows[i].getElementsByTagName('td');
+                if (cells.length > 1) {
+                    const nameCell = cells[1]; // Name cell is the second cell in each row
+                    const name = nameCell.innerText.trim();
+                    const link = document.createElement('a');
+                    link.href = `Bio/${name} - bio.txt`;
+                    link.target = '_blank';
+                    link.innerText = name;
+                    nameCell.innerHTML = ''; // Clear the existing text
+                    nameCell.appendChild(link); // Add the hyperlink
+                }
+            }
+    });
 </script>
 </body>
 </html>
