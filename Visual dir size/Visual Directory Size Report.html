@@ -153,7 +153,7 @@
 	<br>
 	<div id="image-container_1">
 		<p align="center">
-			<img src="Visual Directory Size Report - Order By Name.png" id="report-image" />
+			<img src=".\Visual Directory Size Report - Order By Name.png" id="report-image" />
 		</p>
 	</div>
 	<br>
@@ -165,7 +165,7 @@
 	<br>
 	<div id="image-container_2">
 		<p align="center">
-			<img src="Visual Directory Size Report - Order By Size.png" id="report-image" />
+			<img src=".\Visual Directory Size Report - Order By Size.png" id="report-image" />
 		</p>
 	</div>
 	<div class="search_container">
@@ -1845,7 +1845,7 @@
                     const nameCell = cells[1]; // Name cell is the second cell in each row
                     const name = nameCell.innerText.trim();
                     const link = document.createElement('a');
-                    link.href = `Visual dir size/Bio/${name} - bio.txt`;
+                    link.href = `./Bio/${name} - bio.txt`;
                     link.target = '_blank';
                     link.innerText = name;
                     nameCell.innerHTML = ''; // Clear the existing text
