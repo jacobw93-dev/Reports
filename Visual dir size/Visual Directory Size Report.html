@@ -128,6 +128,20 @@
             .search-container {
               width: 80%;
             }
+		/* Basic styles for the popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            z-index: 1000;
+            max-width: 300px;
+            overflow-wrap: break-word;
+        }
 	</style>
 	</head>
 		<body id="bg" style="background-color:black;color:white;text-shadow: 1px 1px #000000;">
@@ -1656,7 +1670,8 @@
 <tr><td /><td>Zuzana Drabinova</td><td align="right">21,62 G</td><td align="right">24 578</td><td align="right">0,2 %</td></tr>
 <tr><td /><td>Zuzana Z</td><td align="right">4,07 G</td><td align="right">5 516</td><td align="right">0%</td></tr>
 <tr><td /><td>Zuzana Zakova</td><td align="right">9,82 G</td><td align="right">2 653</td><td align="right">0,1 %</td></tr>
-</TABLE><br>
+</TABLE><div id="popup" class="popup"></div><br>
+
 <script>
 	let sortColumn = 1; // Initially sorting by "Name" column
 	let ascending = false;
@@ -1837,9 +1852,11 @@
 			toggleBtn_2.classList.add("expanded");
 		}
 	}
+	
 	document.addEventListener('DOMContentLoaded', () => {
             const table = document.getElementById('data-table');
             const rows = table.getElementsByTagName('tr');
+            const popup = document.getElementById('popup');
 
             for (let i = 1; i < rows.length; i++) { // Skip the header row
                 const cells = rows[i].getElementsByTagName('td');
@@ -1847,14 +1864,40 @@
                     const nameCell = cells[1]; // Name cell is the second cell in each row
                     const name = nameCell.innerText.trim();
                     const link = document.createElement('a');
-                    link.href = `Bio/${name} - bio.txt`;
+                    // Use relative URL
+					const my_href = `Bio/${name.replace(/ /g, '%20')}%20-%20bio.txt`;
+					link.href = `${my_href}`;
                     link.target = '_blank';
                     link.innerText = name;
                     nameCell.innerHTML = ''; // Clear the existing text
                     nameCell.appendChild(link); // Add the hyperlink
+
+                    link.addEventListener('mouseover', function(event) {
+                        console.log(`Fetching URL: ${link.href}`);
+                        fetch(link.href)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error(`HTTP error! status: ${response.status}`);
+                                }
+                                return response.text();
+                            })
+                            .then(data => {
+                                popup.innerHTML = data;
+                                popup.style.display = 'block';
+                            })
+                            .catch(error => {
+                                console.error('Error fetching bio:', error);
+                                popup.innerHTML = 'Failed to load content';
+                                popup.style.display = 'block';
+                            });
+                    });
+
+                    link.addEventListener('mouseout', function() {
+                        popup.style.display = 'none';
+                    });
                 }
             }
-    });
+        });
 </script>
 </body>
 </html>
