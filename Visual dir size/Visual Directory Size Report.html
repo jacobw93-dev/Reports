@@ -2492,11 +2492,24 @@
 	function createHex() {
 		let hexCode = '';
 		const hexValues = '0123456789abcdef';
+
+		// Generate three color channels
+		let colors = [];
 		for (let i = 0; i < 3; i++) {
-			const brightness = Math.floor(Math.random() * 64) + 48;
-			hexCode += hexValues.charAt(brightness >> 4);
-			hexCode += hexValues.charAt(brightness & 0x0F);
+			const brightness = Math.floor(Math.random() * 64) + 80; // Increase brightness base
+			colors.push(brightness);
 		}
+
+		// Randomly pick one channel to reduce to increase saturation
+		const desaturateIndex = Math.floor(Math.random() * 3);
+		colors[desaturateIndex] = Math.floor(Math.random() * 64); // Lower one component
+
+		// Build the hex code
+		for (let i = 0; i < 3; i++) {
+			hexCode += hexValues.charAt(colors[i] >> 4);
+			hexCode += hexValues.charAt(colors[i] & 0x0F);
+		}
+
 		return hexCode;
 	}
 	function sortTable(col) {
